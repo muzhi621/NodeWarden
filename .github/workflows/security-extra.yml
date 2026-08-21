@@ -42,13 +42,14 @@ jobs:
       security-events: write
 
     with:
-    scan-args: |
-    scan-args: |
-      --recursive
-      --output-files=results.sarif
-    upload-sarif: true
-    fail-on-vuln: true
-    fail-on-v
+      scan-args: |
+        ./
+        --recursive
+        --output-files=results.sarif
+      upload-sarif: true
+      fail-on-vuln: true
+  
+
 
   pnpm-audit:
     name: pnpm audit
